@@ -1,0 +1,101 @@
+/* style.css */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fef6e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Heading */
+.heading {
+  margin-bottom: 30px;
+}
+
+.heading-text {
+  font-size: 3rem;
+  color: #001858;
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+/* Game Grid */
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #8bd3dd;
+  border: 3px solid #001858;
+  color: #001858;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #f582ae;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  background-color: #f3d2c1;
+  transform: scale(0.95);
+}
+
+.win {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #f582ae;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  display: none; /* Hide by default, show it with JS when there's a winner */
+}
+
+/* Control Buttons Container */
+.controls {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Control Buttons */
+.control-btn {
+  background-color: #001858;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.control-btn:hover {
+  background-color: #f582ae;
+  transform: translateY(-2px);
+}
+
+.control-btn:active {
+  background-color: #f3d2c1;
+  color: #001858;
+  transform: scale(0.97);
+}
